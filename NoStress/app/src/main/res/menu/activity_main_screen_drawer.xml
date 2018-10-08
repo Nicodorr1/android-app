@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_all_jokes"
+            android:icon="@drawable/ic_alljokes"
+            android:title="All StressKillers" />
+        <item
+            android:id="@+id/nav_top_jokes"
+            android:icon="@drawable/ic_top"
+            android:title="Top StressKillers" />
+        <item
+            android:id="@+id/nav_create_joke"
+            android:icon="@drawable/ic_mode_edit"
+            android:title="Add your own" />
+        <item
+            android:id="@+id/im1"
+            android:icon="@android:drawable/ic_menu_week"
+            android:title="Image of the week"/>
+
+
+    </group>
+
+    <item android:title="Competition">
+        <menu>
+            <item
+                android:title="Competition"
+                android:icon="@drawable/ic_notifications"
+                android:id="@+id/comp"/>
+
+            <item
+                android:id="@+id/vote"
+                android:icon="@drawable/ic_alljokes"
+                android:title="Vote" />
+
+        </menu>
+    </item>
+
+    <item android:title="Tools">
+        <menu>
+            <item
+                android:title="Settings"
+                android:icon="@drawable/ic_menu_manage"
+                android:id="@+id/set"/>
+
+            <item
+                android:id="@+id/nav_prv"
+                android:icon="@drawable/ic_pr"
+                android:title="Privacy" />
+
+        </menu>
+    </item>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:title="Contact us"
+                android:id="@+id/contact"
+                android:icon="@drawable/ic_chat" />
+
+            <item
+                android:id="@+id/help"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Help us" />
+        </menu>
+    </item>
+
+</menu>

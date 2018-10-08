@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E8E8">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <!-- Name Label -->
+
+    <!-- Input Name -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="You can kill stress of others"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp" />
+
+    <EditText android:id="@+id/inputName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dip"
+        android:layout_marginTop="15dip"
+        android:hint="Your Name"
+        android:singleLine="true"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dip"
+        android:hint="Your Email"
+        android:ems="10"
+        android:id="@+id/inputEmail" />
+
+    <EditText android:id="@+id/inputTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="StressKiller Title"
+        android:layout_marginBottom="15dip"
+        android:singleLine="true"/>
+
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="StressKiller Genre"
+        android:layout_marginBottom="15dip"
+        android:id="@+id/inputGenre"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText android:id="@+id/inputContent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Content"
+        android:layout_marginBottom="15dip"
+        android:lines="4"
+        android:gravity="top"/>
+
+    <!-- Button Create Product -->
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I have accepted terms and conditions"
+        android:id="@+id/checkBox"
+        android:layout_gravity="center_horizontal" />
+
+    <Button android:id="@+id/btnCreateProduct"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Add A StressKiller"
+        android:visibility="gone"
+        android:background="#b0321f"
+        android:textColor="#ffffff"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>
+</ScrollView>

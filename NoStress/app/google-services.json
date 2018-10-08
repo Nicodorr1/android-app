@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "308463900962",
+    "firebase_url": "https://stresskiller-1307.firebaseio.com",
+    "project_id": "stresskiller-1307",
+    "storage_bucket": "stresskiller-1307.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308463900962:android:330d4d157cbf6d99",
+        "android_client_info": {
+          "package_name": "com.example.nicodorr.nostress"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308463900962-sjb4f3e79plfn8bgub85jdvuki87e9sv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nicodorr.nostress",
+            "certificate_hash": "230a7e02bd6da77c3b379ba4ef1e3f96c45df25e"
+          }
+        },
+        {
+          "client_id": "308463900962-fr6qivlffn2su0p79ve2qguplajsn1tp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4uo1KVtnTrmfXIWyE9brPavXDKOgNEPE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308463900962-fr6qivlffn2su0p79ve2qguplajsn1tp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
