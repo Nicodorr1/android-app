@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:layout_scrollFlags="scroll"
+    tools:context="com.example.nicodorr.nostress.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ViewFlipper
+            android:id="@+id/vfl"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <LinearLayout
+            android:id="@+id/lnl"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/vfl"
+            android:background="#e9e8e8">
+
+            <ImageView
+                android:id="@+id/lis1"
+                android:layout_width="0dip"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/list"
+                android:tag="List" />
+
+            <ImageView
+                android:id="@+id/add1"
+                android:layout_width="0dip"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/addnew" />
+
+            <ImageView
+                android:id="@+id/com1"
+                android:layout_width="0dip"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/compet" />
+
+            <ImageView
+                android:id="@+id/vot1"
+                android:layout_width="0dip"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/vote" />
+
+            <ImageView
+                android:id="@+id/pro1"
+                android:layout_width="0dip"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/usrprof" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnlte"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/lnl"
+            android:background="#e4e4e4">
+
+            <TextView
+                android:id="@+id/lis2"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="List" />
+
+            <TextView
+                android:id="@+id/add2"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="Add New" />
+
+            <TextView
+                android:id="@+id/com2"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="Compet" />
+
+            <TextView
+                android:id="@+id/vot2"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="Vote" />
+
+            <TextView
+                android:id="@+id/pro2"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="Profile" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lnlte"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/lll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:gravity="center"
+                android:text="Top &amp; Offline"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rl1"
+            android:layout_marginTop="17dp"
+            android:clickable="true">
+
+
+            <RelativeLayout
+                android:id="@+id/rel1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:elevation="10dp"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/person_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Crossing the graveyard"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:id="@+id/ctgyar"
+                    android:backgroundTint="@color/colorAccent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_view" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/cv"
+            android:layout_marginTop="10dp"
+            android:clickable="true">
+
+
+            <RelativeLayout
+                android:id="@+id/rel2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:elevation="10dp"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/pen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Jake &amp; his grand-father"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:id="@+id/jhgfat"
+                    android:backgroundTint="@color/colorAccent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_view" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/cv2"
+            android:layout_marginTop="10dp"
+            android:clickable="true">
+
+
+            <RelativeLayout
+                android:id="@+id/rel3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:elevation="10dp"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/pen2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="The old woman"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:id="@+id/towom"
+                    android:backgroundTint="@color/colorAccent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_view" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/cv5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cv3"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/yee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:gravity="center"
+                android:text="Read &amp; Laugh"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/cv6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cv5"
+            android:layout_marginTop="10dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imd"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@android:drawable/ic_menu_week" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="Image of the week" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center"
+                    android:text="View..." />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1">
+
+                <!--<android.support.v7.widget.CardView-->
+                <!--android:layout_width="60dp"-->
+                <!--android:layout_height="60dp"-->
+                <!--app:cardCornerRadius="60dp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:innerRadius="0dp"-->
+                <!--android:shape="ring"-->
+                <!--android:thicknessRatio="1.9">-->
+                <!--<ImageView-->
+                <!--android:layout_width="80dp"-->
+                <!--android:layout_height="80dp"-->
+                <!--android:id="@+id/imd2"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:src="@drawable/usrprof"/>-->
+                <!--</android.support.v7.widget.CardView>-->
+
+                <FrameLayout
+                    android:id="@+id/frame"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp">
+
+                    <ImageView
+                        android:id="@+id/imd2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/usrprof" />
+
+                    <ImageView
+                        android:id="@+id/circle_crop"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/imc" />
+
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/unho"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center"
+                    android:text="Change profile" />
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ddr"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/cv6"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"></LinearLayout>
+
+    </RelativeLayout>
+
+
+</ScrollView>

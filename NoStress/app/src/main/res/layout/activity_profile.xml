@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.nicodorr.nostress.Profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout">
+
+
+        <RelativeLayout
+            android:id="@+id/header_cover_image"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/tetla">
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:id="@+id/dnm"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/u_name"
+                    android:textColor="@color/white"
+                    android:layout_width="0dip"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:text=""/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header_cover_image"
+            android:layout_margin="5dp"
+            android:layout_marginTop="-100dp"
+            android:background="#fff"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp">
+
+            <FrameLayout
+                android:id="@+id/frame"
+                android:layout_width="150dp"
+                android:layout_height="150dp">
+
+                <ImageView
+                    android:id="@+id/imvd"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:elevation="5dp"
+                    android:padding="20dp"
+                    android:src="@drawable/usrprof" />
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frame"
+                android:layout_marginLeft="30dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/ic_menu_camera"
+                android:text="Choose"
+                android:padding="10dp"
+                android:textColor="@color/colorAccent"
+                android:textAllCaps="false"
+                android:elevation="3dp" />
+
+            <Button
+                android:id="@+id/chpic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="46dp"
+                android:layout_marginStart="46dp"
+                android:layout_toEndOf="@+id/frame"
+                android:layout_toRightOf="@+id/frame"
+                android:background="@color/white"
+                android:elevation="1dp"
+                android:gravity="center"
+                android:onClick="chancepic"
+                android:padding="10dp"
+                android:text="Save picture"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/nam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/chpic"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/chpic"
+                android:layout_marginTop="28dp"
+                android:text="Firstname" />
+
+            <TextView
+                android:id="@+id/pri"
+                android:layout_alignLeft="@+id/chpic"
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nam"
+                android:text="Lastname"/>
+
+            <ImageView
+                android:id="@+id/circle_crop"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/frame"
+                android:elevation="5dp"
+                android:padding="20dp"
+                android:src="@drawable/imc" />
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/tfi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlll"
+            android:layout_marginTop="20dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Change Firstname &amp; Lastname"
+            android:textStyle="bold"
+            android:textSize="15dp"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dnm2"
+            android:elevation="2dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_below="@+id/tfi"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edfn"
+                android:hint="Firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edln"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lastname"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/btni"
+            android:text="Change Name"
+            android:layout_below="@+id/dnm2"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false"
+            android:elevation="1dp"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:padding="15dp"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/ddsr"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/btni"
+            android:elevation="2dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"></LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
+

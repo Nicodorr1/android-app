@@ -32,6 +32,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 /*import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -49,6 +50,10 @@ import java.util.List;
 
 public class MainScreenActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    public static final String PREFS_NAME = "SettingsActivity";
+    private static final String TAG = "TheName";
+
 
     private List<Car> myCars = new ArrayList<Car>();
       //  WebView mWebView;
@@ -70,8 +75,22 @@ public class MainScreenActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+//        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+//        String sSetting = prefs.getString("example_text","Stresskiller");
+//
+        TextView dName = (TextView)findViewById(R.id.Dname);
+//        dName.setText(sSetting.toString());
+
+        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        String restoredText = prefs.getString("example_text", null);
+        if (restoredText != null) {
+            String name = prefs.getString("name", "No name defined");//"No name defined" is the default value.
+            dName.setText(name);
+        }
 
 
         if (android.os.Build.VERSION.SDK_INT > 9) {
@@ -116,8 +135,9 @@ public class MainScreenActivity extends AppCompatActivity
 
     }
 
+
     private void populateCarList(){
-        myCars.add(new Car("Crossing the grave yeard", 2423, R.drawable.sm5, "A woman were crossing a graveyard during the night, she was so afraid, suddenly she sees a man, she relieved and join him quickly. Man seeing her face and said: Are you afraid? She answer: Yes! Then the man smiled and told her: It is normal, I was also very afraid of graveyard when I was alive. Exercise: please calculate the running speed of that woman , 10pts."));
+        myCars.add(new Car("Crossing the graveyard", 2423, R.drawable.sm5, "A woman were crossing a graveyard during the night, she was so afraid, suddenly she sees a man, she relieved and join him quickly. Man seeing her face and said: Are you afraid? She answer: Yes! Then the man smiled and told her: It is normal, I was also very afraid of graveyard when I was alive. Exercise: please calculate the running speed of that woman , 10pts."));
         myCars.add(new Car("Jake and his grand-father", 2064, R.drawable.sm5,"Jake spent 3 weeks without going to school. One day he sit down on the balcony with his grand-father, they were joking together and they saw a staff from the school coming. His grand-father told him: \'Jake, hide yourself quickly because they will find out that you had nothing, so you were able to go to school\'. Jake answered to him: \'You are the one who should hide himself because I told them that you died, that\'s why I was not going to school\'."));
         myCars.add(new Car("At the cinema", 2015, R.drawable.sm5, "Peter went to cinema with his girlfriend, while watching the movie, she told him: honey, let\'s bet that the man with the black t-shirt will hide himself in that green house, then the man with the white t-shirt will kill him, though. -Peter: ok, for $20, I bet that it will not be like that. In a while, the action took place as she told. -The girl: yeah I won! Peter gave her $20, then she gave it to him back and said: I\'ve already seen the movie, I will not take your money. -Peter: I have already seen it too, but I did not think that the idiot would make the same mistake one more time."));
         myCars.add(new Car("The old woman", 1954, R.drawable.sm5, "After the huge evolution of the world, an old woman ask her daughter to buy a washing machine, the daughter bought her the washing machine and also a blender. After one week, the daughter asked: -Do they work mom? -Old woman: hmmm! I\'m telling you, the big one works with no problem, but the small one rips all of my panties!"));
@@ -128,8 +148,13 @@ public class MainScreenActivity extends AppCompatActivity
     }
 
     private void populateListView() {
+
         ArrayAdapter<Car> adapter = new MyListAdapter();
         ListView list = (ListView) findViewById(R.id.carsListView);
+
+        LayoutInflater inflateHeader = getLayoutInflater();
+        View headerView = inflateHeader.inflate(R.layout.headerlist, list, false);
+        list.addHeaderView(headerView);
 
 
         LayoutInflater inflater = getLayoutInflater();
@@ -198,14 +223,6 @@ public class MainScreenActivity extends AppCompatActivity
             TextView makeText = (TextView)itemView.findViewById(R.id.item_txtMake);
             makeText.setText(currentCar.getMake());
 
-            // year
-         //   TextView yearText = (TextView)itemView.findViewById(R.id.item_txtYear);
-         //   yearText.setText("Likes: " + currentCar.getYear()); //something like .toString(), in order to pass the integer
-
-            // condition
-           // TextView contitionText = (TextView)itemView.findViewById(R.id.item_txtCondition);
-           // contitionText.setText(currentCar.getCondition());
-
 
             return itemView;
         }
@@ -256,7 +273,17 @@ public class MainScreenActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_all_jokes) {
+        if (id == R.id.profie){
+            Intent pr = new Intent(MainScreenActivity.this, ChangeProfile.class);
+            startActivity(pr);
+        }
+
+        else if (id == R.id.hhhm) {
+            Intent ins = new Intent(MainScreenActivity.this, MainActivity.class);
+            startActivity(ins);
+        }
+
+        else if (id == R.id.nav_all_jokes) {
             // Handle the camera action
             Intent i = new Intent(MainScreenActivity.this, AllProductsActivity.class);
             startActivity(i);

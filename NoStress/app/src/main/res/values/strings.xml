@@ -3,6 +3,8 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="windowNoTitle">true</string>
+    <string name="windowActionBar">false</string>
 
     <string name="action_settings">Settings</string>
     <string name="mytext">The main purpose of Stress Killer is to keep you as younger as possible. We have a list of
@@ -79,6 +81,9 @@
     <string name="title_activity_competition">Competition</string>
     <string name="title_activity_privacy">Privacy</string>
     <string name="title_activity_helpus">Help us</string>
+    <string name="info_for_user">This is not your username, it will be just displayed to you! Go to Settings if you want to change it.</string>
+    <string name="profile_activity">Profile</string>
+    <string name="title_activity_main">Stress Killer</string>
 
     <!--<string name="banner_home_footer">ca-app-pub-0664570763252260/3326522424</string>-->
 </resources>

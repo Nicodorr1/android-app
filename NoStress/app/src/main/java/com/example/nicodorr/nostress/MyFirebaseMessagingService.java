@@ -12,12 +12,27 @@ import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     private static final String TAG = "MyFirebaseMsgService";
+
+    private static final String TAG_I = "MyFirebaseIIDService";
+
+
+    public void onTokenRefresh() {
+        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
+        Log.d(TAG_I, "Refreshed token: " + refreshedToken);
+        storeToken(refreshedToken);
+    }
+
+    private void storeToken(String token) {
+        //saving the token on shared preferences
+        SharedPrefManager.getInstance(getApplicationContext()).saveDeviceToken(token);
+    }
 
     /**
      * Called when message is received.

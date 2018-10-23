@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -12,16 +13,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".WelcomeActivity" />
         <activity
             android:name=".MainScreenActivity"
             android:label="Top StressKillers"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <!-- All Product Activity -->
         <activity
             android:name=".AllProductsActivity"
@@ -31,13 +27,13 @@
         <activity
             android:name=".NewProductActivity"
             android:label="Add New StressKiller"
-            android:parentActivityName=".MainScreenActivity"/>
+            android:parentActivityName=".MainScreenActivity" />
 
         <!-- Edit Product Activity -->
         <activity
             android:name=".EditProductActivity"
             android:label="Read Content"
-            android:parentActivityName=".MainScreenActivity"/>
+            android:parentActivityName=".MainScreenActivity" />
         <activity
             android:name=".ContactUs"
             android:label="Contact us" />
@@ -117,6 +113,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.nicodorr.nostress.MainScreenActivity" />
         </activity>
+        <activity
+            android:name=".Profile"
+            android:label="@string/profile_activity"
+            android:parentActivityName=".MainScreenActivity" />
+        <activity android:name=".ChangeProfile" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
